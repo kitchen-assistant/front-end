@@ -1,0 +1,25 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; }
+
+/* Color Variables */
+@white: #fff;
+@black: #000;
+@chalk: #C8C8C8;
+@coral: #df776f;
+@charcoal: #26252C;
+
+/* Fonts */
+.roboto(@fontweight){font-family: 'Roboto', sans-serif; font-weight: @fontweight;}
+.lato(@fontweight){font-family: 'Lato', sans-serif; font-weight: @fontweight;}
+
+body{background: @charcoal; color: @white; .roboto(400); font-size: 12px; overflow-x: hidden;}
+#hero-section{width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: url(../img/google-home2.jpg) center center; background-size: cover; background-color: @coral; background-blend-mode: multiply; position: relative;
+    .logo{width: 75px; height: 75px; background: @white; border-radius: 100%; position: absolute; top: 20px; left: 20px; z-index: 2;}
+    h1{.roboto(900); font-size: 78px; color: @white; padding-bottom: 10px;}
+    h2{.roboto(300); font-size: 21px; font-style: italic; color: @white;}
+}
+#info-section{width: 100vw; height: 100vh; background: @white;
+
+}
+
+footer{width: 100vw; height: 50vh; background: @coral;}
