@@ -15,8 +15,8 @@
 body{max-width: 100vw; background: @charcoal; color: @white; .roboto(400); font-size: 12px; overflow-x: hidden;}
 #hero-section{width: 100%; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: url(../img/google-home2.jpg) center center; background-size: cover; background-color: @charcoal; background-blend-mode: multiply; position: relative;
     .logo{display: none; width: 75px; height: 75px; background: @white; border-radius: 100%; position: absolute; top: 20px; left: 20px; z-index: 2;}
-    h1{.roboto(900); font-size: 78px; color: @white; padding-bottom: 10px;}
-    h2{.roboto(300); font-size: 21px; font-style: italic; color: @white;}
+    h1{.roboto(900); font-size: 78px; color: @white; padding-bottom: 10px; text-align: center;}
+    h2{.roboto(300); font-size: 21px; font-style: italic; color: @white; text-align: center;}
     button.get-app{background: rgba(0,0,0, .4); border: 1px solid @white; outline: none; box-shadow: none; width: 250px; height: 40px; border-radius: 45px; text-align: center; line-height: 40px; .roboto(400); font-size: 18px; letter-spacing: 2px; color: @white; text-transform: uppercase; margin: 40px 0 0 0; transition: .25s ease-in-out;
         &:hover{cursor: pointer; background: @white; color: @black; border-radius: 0px; font-weight: bold;}
     }
@@ -36,4 +36,17 @@ body{max-width: 100vw; background: @charcoal; color: @white; .roboto(400); font-
         }
     }
 }
+
 footer{width: 100%; height: 50vh; background: @black;}
+
+@media screen and (max-width: 876px){
+    #hero-section{
+        h1{font-size: 48px;}
+        h2{font-size: 16px;}
+        button.get-app{font-size: 14px; width: 200px;}
+    }
+    #app-highlights, #our-team{
+        h1{font-size: 32px;}
+    }
+    .site-navigation{right: 20px;}
+}
