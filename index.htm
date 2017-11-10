@@ -3,6 +3,7 @@
         <title>Kitchen Assist - A Smarter Kitchen</title>
         <link rel="stylesheet" href="css/style.css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:300,400,700,900" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <section id="hero-section">
@@ -14,28 +15,35 @@
             <button class="get-app">View Our App</button>
             <div class="hero-overlay"></div>
         </section>
-        <section id="info-section">
+        <section id="app-highlights">
             <h1>App Highlights</h1>
         </section>
-        <section id="info-section">
+        <section id="our-team">
             <h1>Our Team</h1>
             <div class="circle-bg">
         
             </div>
         </section>
         <div class="site-navigation">
-            <div class="section-button">
-
-            </div>
-            <div class="section-button">
+            <a href="#hero-section" class="section-button">
+                
+            </a>
+            <a href="#app-highlights" class="section-button">
             
-            </div>
-            <div class="section-button">
+            </a>
+            <a href="#our-team" class="section-button">
             
-            </div>
+            </a>
         </div>
         <footer>
 
         </footer>
+        
+        <script>
+            $('.section-button').on('click', function(){
+                $('.section-button.active').removeClass('active');
+                $(this).addClass('active');
+            });
+        </script>
     </body>
 </html>
