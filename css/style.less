@@ -54,7 +54,7 @@ body{max-width: 100vw; background: @charcoal; color: @white; .roboto(400); font-
         .team-member-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex: 1; min-height: 200px; margin: 20px;
             .team-member-picture{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 175px; height: 175px; border-radius: 100%; background-blend-mode: multiply; color: @white; margin: 10px 0; overflow: hidden;}
             &:first-of-type{
-                .team-member-picture{background: url(../img/jesse.jpg) center center; background-size: contain; background-blend-mode: multiply;}
+                .team-member-picture{background: url(../img/jesse.jpg) center center; background-size: contain; filter: saturate(0%); background-blend-mode: multiply;}
             }
             &:nth-of-type(2){
                 .team-member-picture{background: url(../img/black-white/jeremy.jpg) center center; background-size: contain; background-blend-mode: multiply;}
@@ -66,7 +66,13 @@ body{max-width: 100vw; background: @charcoal; color: @white; .roboto(400); font-
                 .team-member-picture{background: url(../img/black-white/zach.jpg) center center; background-size: contain; background-blend-mode: multiply;}
             }
             .team-member-role{text-transform: uppercase; text-align: center; font-size: 16px; letter-spacing: 2px; .roboto(900); color: @black; line-height: 1.4; padding: 10px 20px;
-                span{display: block; .roboto(300); font-size: 14px; margin-top: 10px; opacity: 1; transform: translateY(0); transition: .25s ease-in-out;}
+                span{display: block; .roboto(300); font-size: 14px; margin: 10px 0 5px 0; opacity: 1; transform: translateY(0); transition: .25s ease-in-out;}
+                a{
+                    i{font-size: 18px; color: #333; transition: .25s ease-in-out;}
+                    &:hover{
+                        i{color: @coral;}
+                    }
+                }
             }
         }
     }
@@ -95,9 +101,10 @@ footer{width: 100%; min-height: 50vh; background: @black; display: flex; flex-di
             }
             .copyright-info{color: @white; font-size: 12px; .roboto(400); font-style: italic; margin: 40px 0 0 0;}
         }
-        .logo{display: flex; width: 50px; height: 50px; background: @white; justify-content: center; border-radius: 100%; text-align: center; line-height: 50px; .roboto(900); font-size: 28px; text-shadow: 2px 2px #bbb; color: @chalk; position: relative; z-index: 2;
-            .circle-container{display: flex; flex-direction: row; justify-content: space-around; width: 75%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-                .circle{width: 5px; height: 5px; border-radius: 5px; background: @coral;}
+        .logo{display: flex; flex-direction: row; justify-content: center; align-items: flex-start; width: 60px; height: 60px; background: @white; border-radius: 100%; text-align: center; line-height: 55px; .roboto(700); font-size: 23px; color: @chalk; position: relative; z-index: 2;
+            i.material-icons{font-size: 20px; line-height: 55px;}
+            .circle-container{display: flex; flex-direction: row; justify-content: space-around; width: 50%; position: absolute; top: 75%; left: 50%; transform: translate(-50%, -50%);
+                .circle{width: 4px; height: 4px; border-radius: 100%; background: @coral;}
             }
         }
     }
